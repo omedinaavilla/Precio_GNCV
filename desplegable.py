@@ -10,7 +10,7 @@ df = pd.read_csv("df_limpio.csv")
 df["FECHA_PRECIO"] = pd.to_datetime(df["FECHA_PRECIO"])
 
 # Shapefile de departamentos
-gdf = gpd.read_file("MGN_DPTO_POLITICO.shp")
+gdf = gpd.read_file("departamentos.geojson")
 gdf['DPTO_CNMBR'] = gdf['DPTO_CNMBR'].str.upper().str.strip()
 
 # Promedio de precios por departamento
